@@ -70,6 +70,17 @@ activities.
 
 **Fix:** Properly encode all user-provided content that is to be displayed.
 
+### A9:2017- Using Components With Known Vulnerabilities
+**What is:** Components, such as libraries, frameworks, and other software modules, run with the same
+privileges as the application. If a vulnerable component is exploited, such an attack can facilitate
+serious data loss or server takeover. Applications and APIs using components with known
+vulnerabilities may undermine application defenses and enable various attacks and impacts. 
+
+**Identifying the flaw:** Taking a look at the file ```pom.xml``` you can see that Spring Boot's version used in the
+project is 1.4.2. This is not the most recent version and should be upgraded.
+
+**Fix:** Upgrade Spring Boot.
+
 ### A10:2017- Insufficient Logging & Monitoring
 Insufficient logging and monitoring, coupled with missing or ineffective integration with incident
 response, allows attackers to further attack systems, maintain persistence, pivot to more systems,
