@@ -7,5 +7,13 @@
 
         <h1>Thank you! You have been signed up to the event!</h1>
 
+        <p>These are the people currently enrolled to the event:</p>
+
+        <ul>
+            <li th:each="participant : ${participants}">
+                <span th:utext="${participant}"></span>
+            </li>
+        </ul>
+
     </body>
 </html>
